@@ -1,14 +1,13 @@
 package Registration_Page;
 
+import SetUp_Page.SetUp;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.io.IOException;
-import java.text.ParseException;
 
-public class Create_Account {
+public class Create_Account extends SetUp {
     WebDriver driver;
 
     @FindBy(xpath = "//input[contains(@id,'email_create')]")
@@ -56,25 +55,26 @@ public class Create_Account {
     public Create_Account(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
-
-        public String Login_With_Fst() throws IOException, ParseException, InterruptedException {
-
-            create_email.sendKeys("riyan@gmail.com");
-            title.click();
-            fname.sendKeys("Riyan");
-            lanme.sendKeys("Sajib");
-            validate_email.click();
-            Pass.sendKeys("123456");
-            newsletter.click();
-            partners.click();
-            fname2.sendKeys("Riyan");
-            lanme2.sendKeys("Sajib");
-            company.sendKeys("Riseuplabs");
-            address.sendKeys("Uttara");
-            city.sendKeys("Dhaka");
-            dropdwn.click();
-
-
-        }
     }
+
+    public String Reg_first() {
+        create_email.sendKeys("riyan@gmail.com");
+        title.click();
+        fname.sendKeys("Riyan");
+        lanme.sendKeys("Sajib");
+        validate_email.click();
+        Pass.sendKeys("123456");
+        newsletter.click();
+        partners.click();
+        fname2.sendKeys("Riyan");
+        lanme2.sendKeys("Sajib");
+        company.sendKeys("Riseuplabs");
+        address.sendKeys("Uttara");
+        city.sendKeys("Dhaka");
+        dropdwn.click();
+
+        return null;
+    }
+
+
 }

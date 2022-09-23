@@ -15,7 +15,6 @@ import java.util.concurrent.TimeUnit;
 
 public class SetUp {
     public WebDriver driver;
-
     @BeforeTest
     public void setUp() throws IOException {
         ChromeOptions ops = new ChromeOptions();
