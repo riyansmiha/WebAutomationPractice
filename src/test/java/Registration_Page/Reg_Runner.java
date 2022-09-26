@@ -1,13 +1,9 @@
 package Registration_Page;
 
-import Login.Login_Locator;
 import SetUp_Page.SetUp;
 import SetUp_Page.Utilities;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.io.IOException;
-import java.text.ParseException;
 
 public class Reg_Runner extends SetUp {
     Create_Account objlogin1;

@@ -27,10 +27,10 @@ public class Login_Locator {
         PageFactory.initElements(driver, this);
     }
 
-    public String Login_With_Fst() throws IOException, ParseException, InterruptedException {
+    public String Login_With_Fst() {
         signbtn.click();
-        email.sendKeys("bs23_atomation_user_One_3000@gamil.com");
-        password.sendKeys("SQALOVER");
+        email.sendKeys("riyan@gmail.com");
+        password.sendKeys("123456");
         return  Testassert.getText();
     }
 }

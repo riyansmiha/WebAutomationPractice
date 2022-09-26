@@ -52,6 +52,24 @@ public class Create_Account extends SetUp {
     @FindBy(xpath = "//select[contains(@id,'id_state')]")
     WebElement dropdwn;
 
+    @FindBy(xpath = "//input[contains(@id,'postcode')]")
+    WebElement postcode;
+
+    @FindBy(xpath = "//select[contains(@id,'id_country')]")
+    WebElement country;
+
+    @FindBy(xpath = "//textarea[contains(@id,'other')]")
+    WebElement addinfo;
+
+    @FindBy(xpath = "//input[contains(@id,'phone_mobile')]")
+    WebElement phn;
+
+    @FindBy(xpath = "//input[contains(@id,'alias')]")
+    WebElement alias;
+
+    @FindBy(xpath = "//span[contains(.,'Register')]")
+    WebElement reg;
+
     public Create_Account(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -72,6 +90,12 @@ public class Create_Account extends SetUp {
         address.sendKeys("Uttara");
         city.sendKeys("Dhaka");
         dropdwn.click();
+        postcode.sendKeys("1216");
+        country.click();
+        addinfo.sendKeys("Home");
+        phn.sendKeys("01518919299");
+        alias.sendKeys("Dhaka");
+        reg.click();
 
         return null;
     }
